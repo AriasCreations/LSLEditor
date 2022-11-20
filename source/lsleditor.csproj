@@ -10,11 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Properties\Resources.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Properties\Resources.Designer.cs" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>

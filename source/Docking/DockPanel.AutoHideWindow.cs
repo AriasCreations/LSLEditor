@@ -2,6 +2,7 @@ using System;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using Timer = System.Windows.Forms.Timer;
 
 namespace LSLEditor.Docking
 {

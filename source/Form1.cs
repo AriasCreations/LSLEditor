@@ -37,61 +37,61 @@ namespace LSLEditor
 		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
 		private System.Windows.Forms.Panel panel1;
 		private System.ComponentModel.IContainer components = null;
-		private Compiler compiler;
+		private System.CodeDom.Compiler.CodeCompiler compiler;
 		private bool FullDebug;
 		private System.Windows.Forms.TabControl tabControl1;
-		private System.Windows.Forms.ContextMenu contextMenu1;
+		private System.Windows.Forms.ContextMenuStrip contextMenu1;
 
-		private System.Windows.Forms.MainMenu mainMenu1;
-		private System.Windows.Forms.MenuItem menuItem1;
-		private System.Windows.Forms.MenuItem menuItem2;
-		private System.Windows.Forms.MenuItem menuItem3;
-		private System.Windows.Forms.MenuItem menuItem4;
-		private System.Windows.Forms.MenuItem menuItem5;
-		private System.Windows.Forms.MenuItem menuItem6;
-		private System.Windows.Forms.MenuItem menuItem7;
-		private System.Windows.Forms.MenuItem menuItem8;
-		private System.Windows.Forms.MenuItem menuItem9;
-		private System.Windows.Forms.MenuItem menuItem10;
-		private System.Windows.Forms.MenuItem menuItem11;
-		private System.Windows.Forms.MenuItem menuItem12;
-		private System.Windows.Forms.MenuItem menuItem13;
-		private System.Windows.Forms.MenuItem menuItem14;
-		private System.Windows.Forms.MenuItem menuItem15;
-		private System.Windows.Forms.MenuItem menuItem16;
-		private System.Windows.Forms.MenuItem menuItem17;
-		private System.Windows.Forms.MenuItem menuItem18;
-		private System.Windows.Forms.MenuItem menuItem19;
-		private System.Windows.Forms.MenuItem menuItem20;
-		private System.Windows.Forms.MenuItem menuItem21;
-		private System.Windows.Forms.MenuItem menuItem22;
-		private System.Windows.Forms.MenuItem menuItem23;
-		private System.Windows.Forms.MenuItem menuItem24;
-		private System.Windows.Forms.MenuItem menuItem25;
-		private System.Windows.Forms.MenuItem menuItem26;
-		private System.Windows.Forms.MenuItem menuItem27;
-		private System.Windows.Forms.MenuItem menuItem28;
-		private System.Windows.Forms.MenuItem menuItem29;
-		private System.Windows.Forms.MenuItem menuItem30;
-		private System.Windows.Forms.MenuItem menuItem31;
-		private System.Windows.Forms.MenuItem menuItem32;
+		private System.Windows.Forms.MenuStrip mainMenu1;
+		private System.Windows.Forms.ToolStripMenuItem menuItem1;
+		private System.Windows.Forms.ToolStripMenuItem menuItem2;
+		private System.Windows.Forms.ToolStripMenuItem menuItem3;
+		private System.Windows.Forms.ToolStripMenuItem menuItem4;
+		private System.Windows.Forms.ToolStripMenuItem menuItem5;
+		private System.Windows.Forms.ToolStripMenuItem menuItem6;
+		private System.Windows.Forms.ToolStripMenuItem menuItem7;
+		private System.Windows.Forms.ToolStripMenuItem menuItem8;
+		private System.Windows.Forms.ToolStripMenuItem menuItem9;
+		private System.Windows.Forms.ToolStripMenuItem menuItem10;
+		private System.Windows.Forms.ToolStripMenuItem menuItem11;
+		private System.Windows.Forms.ToolStripMenuItem menuItem12;
+		private System.Windows.Forms.ToolStripMenuItem menuItem13;
+		private System.Windows.Forms.ToolStripMenuItem menuItem14;
+		private System.Windows.Forms.ToolStripMenuItem menuItem15;
+		private System.Windows.Forms.ToolStripMenuItem menuItem16;
+		private System.Windows.Forms.ToolStripMenuItem menuItem17;
+		private System.Windows.Forms.ToolStripMenuItem menuItem18;
+		private System.Windows.Forms.ToolStripMenuItem menuItem19;
+		private System.Windows.Forms.ToolStripMenuItem menuItem20;
+		private System.Windows.Forms.ToolStripMenuItem menuItem21;
+		private System.Windows.Forms.ToolStripMenuItem menuItem22;
+		private System.Windows.Forms.ToolStripMenuItem menuItem23;
+		private System.Windows.Forms.ToolStripMenuItem menuItem24;
+		private System.Windows.Forms.ToolStripMenuItem menuItem25;
+		private System.Windows.Forms.ToolStripMenuItem menuItem26;
+		private System.Windows.Forms.ToolStripMenuItem menuItem27;
+		private System.Windows.Forms.ToolStripMenuItem menuItem28;
+		private System.Windows.Forms.ToolStripMenuItem menuItem29;
+		private System.Windows.Forms.ToolStripMenuItem menuItem30;
+		private System.Windows.Forms.ToolStripMenuItem menuItem31;
+		private System.Windows.Forms.ToolStripMenuItem menuItem32;
 		private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
 		private System.Windows.Forms.PrintDialog printDialog1;
-		private System.Windows.Forms.MenuItem menuItem34;
-		private System.Windows.Forms.MenuItem menuItem35;
-		private System.Windows.Forms.MenuItem menuItem36;
+		private System.Windows.Forms.ToolStripMenuItem menuItem34;
+		private System.Windows.Forms.ToolStripMenuItem menuItem35;
+		private System.Windows.Forms.ToolStripMenuItem menuItem36;
 		private TabPage tabPage1;
 		private NumberedTextBox.NumberedTextBoxUC numberedTextBoxUC1;
-		private MenuItem menuItem37;
-		private MenuItem menuItem38;
-		private MenuItem menuItem39;
-		private MenuItem menuItem41;
-		private MenuItem menuItem40;
-		private MenuItem menuItem42;
-		private MenuItem menuItemUploadScript;
+		private ToolStripMenuItem menuItem37;
+		private ToolStripMenuItem menuItem38;
+		private ToolStripMenuItem menuItem39;
+		private ToolStripMenuItem menuItem41;
+		private ToolStripMenuItem menuItem40;
+		private ToolStripMenuItem menuItem42;
+		private ToolStripMenuItem menuItemUploadScript;
 		private StatusStrip statusStrip1;
 		private ToolStripStatusLabel toolStripStatusLabel1;
-		private System.Windows.Forms.MenuItem menuItem33;
+		private System.Windows.Forms.ToolStripMenuItem menuItem33;
 
 		public Form1(string[] args)
 		{
@@ -687,7 +687,7 @@ namespace LSLEditor
 
 		private void StartCompiler()
 		{
-			compiler = new Compiler(this.FullDebug, "ConfLSL.xml", this.numberedTextBoxUC1.TextBox.Text);
+			compiler = new System.CodeDom.Compiler.CodeCompiler(this.FullDebug, "ConfLSL.xml", this.numberedTextBoxUC1.TextBox.Text);
 			if (compiler.CompilerErrors != null)
 			{
 				MessageBox.Show(compiler.CompilerErrors, "compiler errors");

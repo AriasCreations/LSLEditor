@@ -608,8 +608,8 @@ namespace LSLEditor.Docking
 				return DockHelper.IsDockStateValid(dockState, DockAreas);
 		}
 
-		private ContextMenu m_tabPageContextMenu = null;
-		public ContextMenu TabPageContextMenu
+		private ContextMenuStrip m_tabPageContextMenu = null;
+		public ContextMenuStrip TabPageContextMenu
 		{
 			get	{	return m_tabPageContextMenu;	}
 			set	{	m_tabPageContextMenu = value;	}
