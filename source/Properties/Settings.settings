@@ -15,10 +15,10 @@
       <Value Profile="(Default)">LSLEditor Island</Value>
     </Setting>
     <Setting Name="EmailServer" Type="System.String" Scope="User">
-      <Value Profile="(Default)">smtp.emailserver.ext</Value>
+      <Value Profile="(Default)">smtp.emailserver.tld</Value>
     </Setting>
     <Setting Name="EmailAddress" Type="System.String" Scope="User">
-      <Value Profile="(Default)">youraddress@yourdomain.ext</Value>
+      <Value Profile="(Default)">youraddress@yourdomain.tld</Value>
     </Setting>
     <Setting Name="ProxyServer" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -257,10 +257,10 @@
     <Setting Name="ParcelDescription" Type="System.String" Scope="User">
       <Value Profile="(Default)">Description of LSLEditor parcel</Value>
     </Setting>
-    <Setting Name="ParcelOwner" Type="System.String" Scope="User">
+    <Setting Name="ParcelOwner" Type="System.Guid" Scope="User">
       <Value Profile="(Default)">00000000-0000-0000-0000-000000000000</Value>
     </Setting>
-    <Setting Name="ParcelGroup" Type="System.String" Scope="User">
+    <Setting Name="ParcelGroup" Type="System.Guid" Scope="User">
       <Value Profile="(Default)">00000000-0000-0000-0000-000000000000</Value>
     </Setting>
     <Setting Name="ParcelArea" Type="System.Int32" Scope="User">
@@ -323,20 +323,32 @@
     <Setting Name="OutputFormat" Type="System.String" Scope="User">
       <Value Profile="(Default)">UTF-8</Value>
     </Setting>
-#ifndef DEBUG
     <Setting Name="Update" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://lsleditor.sourceforge.net/check4update.php</Value>
     </Setting>
     <Setting Name="UpdateManifest" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://lsleditor.sourceforge.net/update.php</Value>
     </Setting>
-#elseif
-    <Setting Name="Update" Type="System.String" Scope="Application">
+    <Setting Name="Update1" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://a-w-d.dyndns.org:8080/lsleditor/check4update.php</Value>
     </Setting>
-    <Setting Name="UpdateManifest" Type="System.String" Scope="Application">
+    <Setting Name="UpdateManifest1" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://a-w-d.dyndns.org:8080/lsleditor/update.php</Value>
     </Setting>
-#endif
+    <Setting Name="IncludeDirectories" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ParcelID" Type="System.Guid" Scope="User">
+      <Value Profile="(Default)">00000000-0000-0000-0000-000000000000</Value>
+    </Setting>
+    <Setting Name="ParcelSeeAvatars" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowIncludeMetaData" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ExampleNameLSLI" Type="System.String" Scope="User">
+      <Value Profile="(Default)">default.lsli</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

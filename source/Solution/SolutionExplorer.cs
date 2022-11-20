@@ -44,6 +44,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
+using Timer = System.Windows.Forms.Timer;
 
 namespace LSLEditor.Solution
 {

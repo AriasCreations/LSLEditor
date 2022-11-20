@@ -42,7 +42,7 @@ namespace LSLEditor
 		private System.Windows.Forms.TabControl tabControl1;
 		private System.Windows.Forms.ContextMenuStrip contextMenu1;
 
-		private System.Windows.Forms.MenuStrip mainMenu1;
+		private System.Windows.Forms.ContextMenuStrip mainMenu1;
 		private System.Windows.Forms.ToolStripMenuItem menuItem1;
 		private System.Windows.Forms.ToolStripMenuItem menuItem2;
 		private System.Windows.Forms.ToolStripMenuItem menuItem3;
@@ -129,49 +129,49 @@ namespace LSLEditor
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-			this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
-			this.menuItem1 = new System.Windows.Forms.MenuItem();
-			this.menuItem11 = new System.Windows.Forms.MenuItem();
-			this.menuItem4 = new System.Windows.Forms.MenuItem();
-			this.menuItem41 = new System.Windows.Forms.MenuItem();
-			this.menuItem40 = new System.Windows.Forms.MenuItem();
-			this.menuItem42 = new System.Windows.Forms.MenuItem();
-			this.menuItemUploadScript = new System.Windows.Forms.MenuItem();
-			this.menuItem15 = new System.Windows.Forms.MenuItem();
-			this.menuItem13 = new System.Windows.Forms.MenuItem();
-			this.menuItem5 = new System.Windows.Forms.MenuItem();
-			this.menuItem7 = new System.Windows.Forms.MenuItem();
-			this.menuItem35 = new System.Windows.Forms.MenuItem();
-			this.menuItem34 = new System.Windows.Forms.MenuItem();
-			this.menuItem36 = new System.Windows.Forms.MenuItem();
-			this.menuItem31 = new System.Windows.Forms.MenuItem();
-			this.menuItem32 = new System.Windows.Forms.MenuItem();
-			this.menuItem6 = new System.Windows.Forms.MenuItem();
-			this.menuItem8 = new System.Windows.Forms.MenuItem();
-			this.menuItem24 = new System.Windows.Forms.MenuItem();
-			this.menuItem23 = new System.Windows.Forms.MenuItem();
-			this.menuItem25 = new System.Windows.Forms.MenuItem();
-			this.menuItem22 = new System.Windows.Forms.MenuItem();
-			this.menuItem21 = new System.Windows.Forms.MenuItem();
-			this.menuItem20 = new System.Windows.Forms.MenuItem();
-			this.menuItem26 = new System.Windows.Forms.MenuItem();
-			this.menuItem28 = new System.Windows.Forms.MenuItem();
-			this.menuItem27 = new System.Windows.Forms.MenuItem();
-			this.menuItem37 = new System.Windows.Forms.MenuItem();
-			this.menuItem38 = new System.Windows.Forms.MenuItem();
-			this.menuItem39 = new System.Windows.Forms.MenuItem();
-			this.menuItem9 = new System.Windows.Forms.MenuItem();
-			this.menuItem12 = new System.Windows.Forms.MenuItem();
-			this.menuItem14 = new System.Windows.Forms.MenuItem();
-			this.menuItem33 = new System.Windows.Forms.MenuItem();
-			this.menuItem29 = new System.Windows.Forms.MenuItem();
-			this.menuItem30 = new System.Windows.Forms.MenuItem();
-			this.menuItem2 = new System.Windows.Forms.MenuItem();
-			this.menuItem16 = new System.Windows.Forms.MenuItem();
-			this.menuItem17 = new System.Windows.Forms.MenuItem();
-			this.menuItem18 = new System.Windows.Forms.MenuItem();
-			this.menuItem19 = new System.Windows.Forms.MenuItem();
-			this.menuItem3 = new System.Windows.Forms.MenuItem();
+			this.mainMenu1 = new ContextMenuStrip(components);
+			this.menuItem1 = new ToolStripMenuItem();
+			this.menuItem11 = new ToolStripMenuItem();
+			this.menuItem4 = new ToolStripMenuItem();
+			this.menuItem41 = new ToolStripMenuItem();
+			this.menuItem40 = new ToolStripMenuItem();
+			this.menuItem42 = new ToolStripMenuItem();
+			this.menuItemUploadScript = new ToolStripMenuItem();
+			this.menuItem15 = new ToolStripMenuItem();
+			this.menuItem13 = new ToolStripMenuItem();
+			this.menuItem5 = new ToolStripMenuItem();
+			this.menuItem7 = new ToolStripMenuItem();
+			this.menuItem35 = new ToolStripMenuItem();
+			this.menuItem34 = new ToolStripMenuItem();
+			this.menuItem36 = new ToolStripMenuItem();
+			this.menuItem31 = new ToolStripMenuItem();
+			this.menuItem32 = new ToolStripMenuItem();
+			this.menuItem6 = new ToolStripMenuItem();
+			this.menuItem8 = new ToolStripMenuItem();
+			this.menuItem24 = new ToolStripMenuItem();
+			this.menuItem23 = new ToolStripMenuItem();
+			this.menuItem25 = new ToolStripMenuItem();
+			this.menuItem22 = new ToolStripMenuItem();
+			this.menuItem21 = new ToolStripMenuItem();
+			this.menuItem20 = new ToolStripMenuItem();
+			this.menuItem26 = new ToolStripMenuItem();
+			this.menuItem28 = new ToolStripMenuItem();
+			this.menuItem27 = new ToolStripMenuItem();
+			this.menuItem37 = new ToolStripMenuItem();
+			this.menuItem38 = new ToolStripMenuItem();
+			this.menuItem39 = new ToolStripMenuItem();
+			this.menuItem9 = new ToolStripMenuItem();
+			this.menuItem12 = new ToolStripMenuItem();
+			this.menuItem14 = new ToolStripMenuItem();
+			this.menuItem33 = new ToolStripMenuItem();
+			this.menuItem29 = new ToolStripMenuItem();
+			this.menuItem30 = new ToolStripMenuItem();
+			this.menuItem2 = new ToolStripMenuItem();
+			this.menuItem16 = new ToolStripMenuItem();
+			this.menuItem17 = new ToolStripMenuItem();
+			this.menuItem18 = new ToolStripMenuItem();
+			this.menuItem19 = new ToolStripMenuItem();
+			this.menuItem3 = new ToolStripMenuItem();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.panel1 = new System.Windows.Forms.Panel();
@@ -179,8 +179,8 @@ namespace LSLEditor
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-			this.contextMenu1 = new System.Windows.Forms.ContextMenu();
-			this.menuItem10 = new System.Windows.Forms.MenuItem();
+			this.contextMenu1 = new ContextMenuStrip();
+			this.menuItem10 = new ToolStripMenuItem();
 			this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
 			this.printDialog1 = new System.Windows.Forms.PrintDialog();
 			this.numberedTextBoxUC1 = new NumberedTextBox.NumberedTextBoxUC();
@@ -192,7 +192,7 @@ namespace LSLEditor
 			// 
 			// mainMenu1
 			// 
-			this.mainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.mainMenu1.Items.AddRange(new ToolStripMenuItem[] {
             this.menuItem1,
             this.menuItem8,
             this.menuItem12,
@@ -200,8 +200,8 @@ namespace LSLEditor
 			// 
 			// menuItem1
 			// 
-			this.menuItem1.Index = 0;
-			this.menuItem1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			//this.menuItem1.index
+			this.menuItem1.Items.AddRange(new ToolStripMenuItem[] {
             this.menuItem11,
             this.menuItem4,
             this.menuItem41,
@@ -316,7 +316,7 @@ namespace LSLEditor
 			// menuItem8
 			// 
 			this.menuItem8.Index = 1;
-			this.menuItem8.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.menuItem8.MenuItems.AddRange(new ToolStripMenuItem[] {
             this.menuItem24,
             this.menuItem23,
             this.menuItem25,
@@ -393,7 +393,7 @@ namespace LSLEditor
 			// menuItem37
 			// 
 			this.menuItem37.Index = 9;
-			this.menuItem37.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.menuItem37.MenuItems.AddRange(new ToolStripMenuItem[] {
             this.menuItem38,
             this.menuItem39});
 			this.menuItem37.Text = "Advanced";
@@ -421,7 +421,7 @@ namespace LSLEditor
 			// menuItem12
 			// 
 			this.menuItem12.Index = 2;
-			this.menuItem12.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.menuItem12.MenuItems.AddRange(new ToolStripMenuItem[] {
             this.menuItem14,
             this.menuItem33,
             this.menuItem29,
@@ -455,7 +455,7 @@ namespace LSLEditor
 			// menuItem2
 			// 
 			this.menuItem2.Index = 3;
-			this.menuItem2.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.menuItem2.MenuItems.AddRange(new ToolStripMenuItem[] {
             this.menuItem16,
             this.menuItem17,
             this.menuItem18,
@@ -543,7 +543,7 @@ namespace LSLEditor
 			// 
 			// contextMenu1
 			// 
-			this.contextMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.contextMenu1.MenuItems.AddRange(new ToolStripMenuItem[] {
             this.menuItem10});
 			// 
 			// menuItem10

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using LSLEditor.Helpers;
 
 namespace LSLEditor.Tools
 {
@@ -60,7 +61,7 @@ namespace LSLEditor.Tools
                 items.Add(item.ToString());
             }
 
-            Properties.Settings.Default.IncludeDirectories = items;
+            Properties.Settings.Default.IncludeDirectories.set(items);
         }
 
         private void buttonAddIncludeDir_Click(object sender, EventArgs e)

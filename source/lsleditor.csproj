@@ -10,6 +10,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Web References\org.lsleditor.www\Reference.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Web References\org.lsleditor.www\Reference.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 

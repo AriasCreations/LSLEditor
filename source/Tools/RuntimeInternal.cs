@@ -64,8 +64,8 @@ namespace LSLEditor.Tools
 
 			this.textBoxParcelName.Text = Properties.Settings.Default.ParcelName;
 			this.textBoxParcelDescription.Text = Properties.Settings.Default.ParcelDescription;
-			this.textBoxParcelOwner.Text = Properties.Settings.Default.ParcelOwner;
-			this.textBoxParcelGroup.Text = Properties.Settings.Default.ParcelGroup;
+			this.textBoxParcelOwner.Text = Properties.Settings.Default.ParcelOwner.ToString();
+			this.textBoxParcelGroup.Text = Properties.Settings.Default.ParcelGroup.ToString();
 			this.textBoxParcelArea.Text = Properties.Settings.Default.ParcelArea.ToString();
 		}
 
@@ -157,8 +157,8 @@ namespace LSLEditor.Tools
 
 			Properties.Settings.Default.ParcelName = this.textBoxParcelName.Text;
 			Properties.Settings.Default.ParcelDescription = this.textBoxParcelDescription.Text;
-			Properties.Settings.Default.ParcelOwner = this.textBoxParcelOwner.Text;
-			Properties.Settings.Default.ParcelGroup = this.textBoxParcelGroup.Text;
+			Properties.Settings.Default.ParcelOwner = new Guid(this.textBoxParcelOwner.Text);
+			Properties.Settings.Default.ParcelGroup = new Guid(this.textBoxParcelGroup.Text);
 
 			int intArea;
 			if(int.TryParse(this.textBoxParcelArea.Text, out intArea))

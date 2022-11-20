@@ -73,7 +73,7 @@ namespace LSLEditor.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("smtp.emailserver.ext")]
+        [global::System.Configuration.DefaultSettingValueAttribute("smtp.emailserver.tld")]
         public string EmailServer {
             get {
                 return ((string)(this["EmailServer"]));
@@ -85,7 +85,7 @@ namespace LSLEditor.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("youraddress@yourdomain.ext")]
+        [global::System.Configuration.DefaultSettingValueAttribute("youraddress@yourdomain.tld")]
         public string EmailAddress {
             get {
                 return ((string)(this["EmailAddress"]));
@@ -1013,9 +1013,9 @@ namespace LSLEditor.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("00000000-0000-0000-0000-000000000000")]
-        public string ParcelOwner {
+        public global::System.Guid ParcelOwner {
             get {
-                return ((string)(this["ParcelOwner"]));
+                return ((global::System.Guid)(this["ParcelOwner"]));
             }
             set {
                 this["ParcelOwner"] = value;
@@ -1025,9 +1025,9 @@ namespace LSLEditor.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("00000000-0000-0000-0000-000000000000")]
-        public string ParcelGroup {
+        public global::System.Guid ParcelGroup {
             get {
-                return ((string)(this["ParcelGroup"]));
+                return ((global::System.Guid)(this["ParcelGroup"]));
             }
             set {
                 this["ParcelGroup"] = value;
@@ -1235,6 +1235,65 @@ namespace LSLEditor.Properties {
         public string UpdateManifest1 {
             get {
                 return ((string)(this["UpdateManifest1"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection IncludeDirectories {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["IncludeDirectories"]));
+            }
+            set {
+                this["IncludeDirectories"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("00000000-0000-0000-0000-000000000000")]
+        public global::System.Guid ParcelID {
+            get {
+                return ((global::System.Guid)(this["ParcelID"]));
+            }
+            set {
+                this["ParcelID"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ParcelSeeAvatars {
+            get {
+                return ((bool)(this["ParcelSeeAvatars"]));
+            }
+            set {
+                this["ParcelSeeAvatars"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ShowIncludeMetaData {
+            get {
+                return ((bool)(this["ShowIncludeMetaData"]));
+            }
+            set {
+                this["ShowIncludeMetaData"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("default.lsli")]
+        public string ExampleNameLSLI {
+            get {
+                return ((string)(this["ExampleNameLSLI"]));
+            }
+            set {
+                this["ExampleNameLSLI"] = value;
             }
         }
     }
