@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using System.ComponentModel;
 using System.Drawing.Printing;
 using System.CodeDom.Compiler;
+using System.Xml;
 
 
 // aximp is oude informatie, maar ik laat het er even instaan
@@ -666,11 +667,13 @@ namespace LSLEditor
 			this.Text += " " + strVersion;
 
 			// load the keywords and colors, give handle to codecompletion listBox
-			this.numberedTextBoxUC1.TextBox.Init("ConfLSL.xml");
+			XmlDocument conf = new XmlDocument();
+			conf.LoadXml("ConfLSL.xml");
+			//this.numberedTextBoxUC1.TextBox.Init(this,conf);
 
 			if (args.Length == 0)
 			{
-				this.numberedTextBoxUC1.TextBox.GetExampleFile();
+				//this.numberedTextBoxUC1.TextBox.GetExampleFile();
 				this.saveFileDialog1.FileName = "new.lsl";
 				this.menuItem13.Text = "Save new.lsl";
 				this.menuItem13.Enabled = false;
@@ -761,17 +764,17 @@ namespace LSLEditor
 			// ZNI note: 
 			// Old compiler is deprecated and obsolete. Microsoft now recommends to use Microsoft.CSharp.CSharpCodeProvider.
 			// TODO: Add this in.
-			compiler = Microsoft.CSharp.CSharpCodeProvider.CreateProvider("csharp").CreateCompiler();
-			compiler = new System.CodeDom.Compiler.ICodeCompiler(this.FullDebug, "ConfLSL.xml", this.numberedTextBoxUC1.TextBox.Text);
-			if (compiler.CompilerErrors != null)
-			{
-				MessageBox.Show(compiler.CompilerErrors, "compiler errors");
-				return;
-			}
+			//compiler = Microsoft.CSharp.CSharpCodeProvider.CreateProvider("csharp").CreateCompiler();
+			//compiler = new System.CodeDom.Compiler.ICodeCompiler(this.FullDebug, "ConfLSL.xml", this.numberedTextBoxUC1.TextBox.Text);
+			//if (compiler.CompilerErrors != null)
+			//{
+			//	MessageBox.Show(compiler.CompilerErrors, "compiler errors");
+			//	return;
+			//}
 
 			if (this.menuItem33.Checked)
 			{
-				compiler.ShowDialog(this);
+			//	compiler.ShowDialog(this);
 			}
 			else
 			{
@@ -792,7 +795,7 @@ namespace LSLEditor
 					this.tabControl1.TabPages.Add(tabPage);
 					this.tabControl1.SelectedIndex = this.tabControl1.TabCount - 1;
 				}
-				tabPage.Controls.Add(compiler.Controls[0]);
+				//tabPage.Controls.Add(compiler.Controls[0]);
 			}
 		}
 
@@ -867,14 +870,14 @@ namespace LSLEditor
 		// F1
 		private void ShowHelp()
 		{
-			string strKeyWord = this.numberedTextBoxUC1.TextBox.GetCurrentKeyWord(false);
+			/*string strKeyWord = this.numberedTextBoxUC1.TextBox.GetCurrentKeyWord(false);
 
 			string strUrl = this.numberedTextBoxUC1.TextBox.HelpUrl + "wakka.php?wakka=" + strKeyWord;
 
 			if (strKeyWord == "")
 				strKeyWord = "Help";
 
-			ShowWebBrowser(strKeyWord, strUrl);
+			ShowWebBrowser(strKeyWord, strUrl);*/
 		}
 
 		// show context menu for tab headers
@@ -915,7 +918,7 @@ namespace LSLEditor
 
 		private void menuItem18_Click(object sender, System.EventArgs e)
 		{
-			ShowWebBrowser("Check for Updates", this.numberedTextBoxUC1.TextBox.UpdateUrl);
+			//ShowWebBrowser("Check for Updates", this.numberedTextBoxUC1.TextBox.UpdateUrl);
 		}
 
 		private void menuItem22_Click(object sender, System.EventArgs e)
@@ -947,7 +950,7 @@ namespace LSLEditor
 
 		private void menuItem24_Click(object sender, System.EventArgs e)
 		{
-			this.numberedTextBoxUC1.TextBox.UndoPlus();
+			//this.numberedTextBoxUC1.TextBox.UndoPlus();
 		}
 
 		private void menuItem23_Click(object sender, System.EventArgs e)
@@ -957,9 +960,9 @@ namespace LSLEditor
 
 		private void menuItem30_Click(object sender, System.EventArgs e)
 		{
-			SimProperties props = new SimProperties();
+			/*SimProperties props = new SimProperties();
 			props.Icon = this.Icon;
-			props.ShowDialog(this);
+			props.ShowDialog(this);*/
 		}
 
 		private void menuItem31_Click(object sender, System.EventArgs e)
@@ -1009,21 +1012,21 @@ namespace LSLEditor
 		{
 			// Format Document
 			AutoFormatter autoFormatter = new AutoFormatter();
-			this.numberedTextBoxUC1.TextBox.Text =
-				autoFormatter.ApplyFormatting(this.numberedTextBoxUC1.TextBox.Text);
+			//this.numberedTextBoxUC1.TextBox.Text =
+			//	autoFormatter.ApplyFormatting(this.numberedTextBoxUC1.TextBox.Text);
 		}
 
 		private void menuItem39_Click(object sender, EventArgs e)
 		{
 			// Format Selection
 			AutoFormatter autoFormatter = new AutoFormatter();
-			this.numberedTextBoxUC1.TextBox.SelectedText =
-				autoFormatter.ApplyFormatting(this.numberedTextBoxUC1.TextBox.SelectedText);
+			//this.numberedTextBoxUC1.TextBox.SelectedText =
+			//	autoFormatter.ApplyFormatting(this.numberedTextBoxUC1.TextBox.SelectedText);
 		}
 
 		private void menuItem40_Click(object sender, EventArgs e)
 		{
-			ShowWebBrowser("Import Examples", this.numberedTextBoxUC1.TextBox.ExamplesUrl);
+			//ShowWebBrowser("Import Examples", this.numberedTextBoxUC1.TextBox.ExamplesUrl);
 		}
 
 		private void ShowWebBrowser(string strTabName, string strUrl)
@@ -1085,7 +1088,7 @@ namespace LSLEditor
 
 		void axWebBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
 		{
-			WebBrowser axWebBrowser1 = sender as WebBrowser;
+			/*WebBrowser axWebBrowser1 = sender as WebBrowser;
 			if (e.Url.ToString() == this.numberedTextBoxUC1.TextBox.UploadUrl)
 			{
 				HtmlElement element = axWebBrowser1.Document.GetElementById("SourceCode");
@@ -1126,7 +1129,7 @@ namespace LSLEditor
 					this.tabControl1.SelectedIndex = this.tabControl1.TabPages.Count - 1;
 					this.Size = oldSize;
 				}
-			}
+			}*/
 		}
 
 		private void UploadScript()
@@ -1139,12 +1142,12 @@ namespace LSLEditor
 			this.Size = new Size(640, 480);
 
 			Bitmap bitmap;
-			ImageManipulation.GetBitmapFromControl helper = new ImageManipulation.GetBitmapFromControl();
+			//ImageManipulation.GetBitmapFromControl helper = new ImageManipulation.GetBitmapFromControl();
 
 			this.tabControl1.SelectedIndex = 0;
-			bitmap = helper.GetOctreeQuantizedBitmap(this, false);
+			//bitmap = helper.GetOctreeQuantizedBitmap(this, false);
 			string strTempFileName = Path.GetTempFileName() + ".gif";
-			bitmap.Save(strTempFileName, ImageFormat.Gif);
+			//bitmap.Save(strTempFileName, ImageFormat.Gif);
 			pictures.Add(strTempFileName);
 
 			for (int intI = 1; intI < this.tabControl1.TabPages.Count; intI++)
@@ -1152,9 +1155,9 @@ namespace LSLEditor
 				if (this.tabControl1.TabPages[intI].Text.Contains("Compiler"))
 				{
 					this.tabControl1.SelectedIndex = intI;
-					bitmap = helper.GetOctreeQuantizedBitmap(this, false);
+					//bitmap = helper.GetOctreeQuantizedBitmap(this, false);
 					strTempFileName = Path.GetTempFileName() + ".gif";
-					bitmap.Save(strTempFileName, ImageFormat.Gif);
+					//bitmap.Save(strTempFileName, ImageFormat.Gif);
 					pictures.Add(strTempFileName);
 					break;
 				}
@@ -1162,12 +1165,12 @@ namespace LSLEditor
 			this.tabControl1.SelectedIndex = intSelectedTab;
 			this.Size = oldSize;
 
-			UploadExamle u = new UploadExamle(
+			/*UploadExamle u = new UploadExamle(
 				Path.GetFileName(this.saveFileDialog1.FileName),
 				this.numberedTextBoxUC1.TextBox.UploadUrl,
 				this.numberedTextBoxUC1.TextBox.Text,
 				pictures);
-			u.ShowDialog(this);
+			u.ShowDialog(this);*/
 
 			// cleanup
 			foreach (string strFileName in pictures)

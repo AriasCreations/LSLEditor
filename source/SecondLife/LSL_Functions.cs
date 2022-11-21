@@ -1228,10 +1228,10 @@ namespace LSLEditor
 							lReturnedDetails.Add(new integer(Properties.Settings.Default.ParcelArea));
 							break;
 						case PARCEL_DETAILS_ID:
-							lReturnedDetails.Add(new integer(Properties.Settings.Default.ParcelID));
+							lReturnedDetails.Add(new integer(Properties.Settings.Default.ParcelID.ToString()));
 							break;
 						case PARCEL_DETAILS_SEE_AVATARS:
-							lReturnedDetails.Add(new integer(Properties.Settings.Default.ParcelSeeAvatars));
+							lReturnedDetails.Add( new integer(  Properties.Settings.Default.ParcelSeeAvatars ? 1 : 0));
 							break;
 						default:
 							break;

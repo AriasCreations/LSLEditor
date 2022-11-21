@@ -111,8 +111,8 @@ namespace LSLEditor.BugReport
 			int intTotal = 0;
 			try
 			{
-				org.lsleditor.www.Service1 webservice = new org.lsleditor.www.Service1();
-
+				//org.lsleditor.www.Service1 webservice = new org.lsleditor.www.Service1();
+				/*
 				string Handle = webservice.Open();
 				if (Handle == null)
 				{
@@ -140,7 +140,7 @@ namespace LSLEditor.BugReport
 						intTotal += Upload(Handle, strFileName, file.Path);
 					}
 					intNumber++;
-				}
+				}*/
 			}
 			catch
 			{
@@ -179,7 +179,7 @@ namespace LSLEditor.BugReport
 		}
 		private int Upload(string Handle, string FileName, byte[] buffer)
 		{
-			org.lsleditor.www.Service1 webservice = new org.lsleditor.www.Service1();
+			/*org.lsleditor.www.Service1 webservice = new org.lsleditor.www.Service1();
 			if (Handle == null)
 				return 0;
 
@@ -203,7 +203,8 @@ namespace LSLEditor.BugReport
 				intTotal += intLength;
 				SetValue(intTotal);
 			}
-			return intTotal;
+			return intTotal;*/
+			return 0;
 		}
 
 		private int Upload(string Handle, string FileName, string strPath)

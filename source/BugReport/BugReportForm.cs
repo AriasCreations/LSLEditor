@@ -45,7 +45,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Reflection;
 
-using LSLEditor.org.lsleditor.www;
 
 
 namespace LSLEditor.BugReport
@@ -200,19 +199,19 @@ namespace LSLEditor.BugReport
 
 		private void listView2_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (this.listView2.SelectedItems.Count == 0)
+			/*if (this.listView2.SelectedItems.Count == 0)
 				return;
 			ListViewItem lvi = this.listView2.SelectedItems[0];
 			string Handle = lvi.Tag.ToString();
 
 			Service1 service1 = new Service1();
 			service1.GetStatusCompleted += new GetStatusCompletedEventHandler(service1_GetStatusCompleted);
-			service1.GetStatusAsync(Handle, Handle);
+			service1.GetStatusAsync(Handle, Handle);*/
 		}
-
+		/*
 		void service1_GetStatusCompleted(object sender, GetStatusCompletedEventArgs e)
 		{
-			this.textBox5.Clear();
+			/*this.textBox5.Clear();
 			string Handle = e.UserState.ToString();
 			if (e.Error != null)
 			{
@@ -253,7 +252,7 @@ namespace LSLEditor.BugReport
 			}
 
 			this.textBox4.Text = strResult.Replace("\n", "\r\n");
-		}
+		}*/
 
 		private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
 		{
