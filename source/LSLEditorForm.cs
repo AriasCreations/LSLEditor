@@ -51,6 +51,7 @@ using System.Windows.Forms;
 using System.Drawing.Printing;
 
 using LSLEditor.Docking;
+using LSLEditor.Images;
 // aximp is oude informatie, maar ik laat het er even instaan
 // aximp %WINDIR%\System32\shdocvw.dll /out:"d:\temp\AxInterop.SHDocVw.dll" /keyfile:"D:\Documents and Settings\Administrator\Mijn documenten\Mijn keys\Test.snk"
 // copieer de TWEE files AxInterop.SHDocVw.dll en SHDocVw.dll in de bin/Debug directory
@@ -935,14 +936,14 @@ namespace LSLEditor
 
 			// This order equals with the KeyWordTypeEnum in KeyWords.cs
 			ImageList imageList = new ImageList();
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Unknown.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Functions.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Events.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Constants.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Class.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Vars.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Properties.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.States.gif"));
+            imageList.Images.Add(Images.Images.Unknown);
+            imageList.Images.Add(Images.Images.Functions);
+            imageList.Images.Add(Images.Images.Events);
+            imageList.Images.Add(Images.Images.Constants);
+            imageList.Images.Add(Images.Images.Class);
+            imageList.Images.Add(Images.Images.Vars);
+            imageList.Images.Add(Images.Images.Properties);
+            imageList.Images.Add(Images.Images.States);
 
 			this.GListBoxWindow.GListBox.ImageList = imageList;
 			// this.tvOutline.ImageList = imageList;

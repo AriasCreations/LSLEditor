@@ -146,14 +146,14 @@ namespace LSLEditor
 
 			this.Layout += new LayoutEventHandler(EditForm_Layout);
 			ImageList imageList = new ImageList();
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Unknown.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Functions.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Events.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Constants.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Class.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Vars.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.Properties.gif"));
-			imageList.Images.Add(new Bitmap(this.GetType(), "Images.States.gif"));
+            imageList.Images.Add(Images.Images.Unknown);
+            imageList.Images.Add(Images.Images.Functions);
+            imageList.Images.Add(Images.Images.Events);
+            imageList.Images.Add(Images.Images.Constants);
+            imageList.Images.Add(Images.Images.Class);
+            imageList.Images.Add(Images.Images.Vars);
+            imageList.Images.Add(Images.Images.Properties);
+            imageList.Images.Add(Images.Images.States);
 
 			this.tvOutline.ImageList = imageList;
 			if (lslEditorForm.outlineToolStripMenuItem.Checked) {

@@ -37,6 +37,7 @@
 //
 // </summary>
 
+using LSLEditor.ImagesSolutionExplorer;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -228,7 +229,9 @@ namespace LSLEditor.Solution
 			for (int intI = 0; intI <= 42; intI++)//41
 			{
 				TypeSL typeSL = (TypeSL)intI;
-				imageList1.Images.Add(intI.ToString(), new Bitmap(typeof(LSLEditorForm), "ImagesSolutionExplorer." + typeSL.ToString().Replace("_", " ") + ".gif"));
+				Bitmap bmp = typeSL.getImageByType();
+				
+				imageList1.Images.Add(intI.ToString(), bmp);
 			}
 
 			// take care of this as an property
