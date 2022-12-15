@@ -206,9 +206,9 @@ protected override bool ProcessMnemonic(char charCode)
 				Point p = this.PointToClient(Control.MousePosition);
 				Rectangle closeImage = new Rectangle(recBounds.Right - 15 - 5, 5, 15, 15);
 				if (closeImage.Contains(p))
-					bitmap = new Bitmap(Type.GetType("LSLEditor.LSLEditorForm"), "Images.Close-Active.gif");
+					bitmap = LSLEditor.Images.Images.CloseActive;
 				else
-					bitmap = new Bitmap(Type.GetType("LSLEditor.LSLEditorForm"), "Images.Close-Inactive.gif");
+					bitmap = LSLEditor.Images.Images.CloseInactive;
 				recBounds.X -= borderSize.Width;
 				recBounds.Y -= borderSize.Height;
 				recBounds.Width += borderSize.Width << 1;
@@ -223,13 +223,13 @@ protected override bool ProcessMnemonic(char charCode)
 				if (this.HoverIndex == intIndex)
 				{
 					render = new VisualStyleRenderer(VisualStyleElement.Tab.TopTabItem.Hot);
-					bitmap = new Bitmap(Type.GetType("LSLEditor.LSLEditorForm"), "Images.Close-Active.gif");
-				}
+                    bitmap = LSLEditor.Images.Images.CloseActive;
+                }
 				else
 				{
 					render = new VisualStyleRenderer(VisualStyleElement.Tab.TabItem.Normal);
-					bitmap = new Bitmap(Type.GetType("LSLEditor.LSLEditorForm"), "Images.Close-Disabled.gif");
-				}
+                    bitmap = LSLEditor.Images.Images.CloseDisabled;
+                }
 				recBounds.Height -= borderSize.Height;
 				render.DrawBackground(g, recBounds);
 			}
